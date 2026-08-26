@@ -1,0 +1,16 @@
+cabal-version:      3.0
+name:               fp2026
+version:            0.1.0.0
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             ViPo
+maintainer:         pi@homedir.eu
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+library
+    ghc-options:        -Wall
+    exposed-modules:    Lessons.Lesson01
+    build-depends:      base ^>=4.20.2.0
+    hs-source-dirs:     src
+    default-language:   Haskell2010
