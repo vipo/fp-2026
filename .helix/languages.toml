@@ -1,0 +1,10 @@
+[language-server.hls]
+command = "haskell-language-server-wrapper"
+args = ["--lsp"]
+
+[[language]]
+name = "haskell"
+language-servers = ["hls"]
+auto-format = true
+indent = { tab-width = 2, unit = "  " }
+
