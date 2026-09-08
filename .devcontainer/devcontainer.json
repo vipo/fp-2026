@@ -1,5 +1,10 @@
 {
-	"image": "vipo/ghcup:9.6.7-1",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/apt-packages:1": {
+      "packages": ["build-essential", "curl", "libffi-dev", "libgmp-dev", "libncurses-dev", "zlib1g-dev", "pkg-config"]
+    }
+  },
 	"customizations": {
 		"vscode": {
 			"extensions": [
