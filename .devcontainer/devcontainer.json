@@ -1,5 +1,5 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
     "ghcr.io/devcontainers-contrib/features/apt-packages:1": {
       "packages": ["build-essential", "curl", "libffi-dev", "libgmp-dev", "libncurses-dev", "zlib1g-dev", "pkg-config"]
