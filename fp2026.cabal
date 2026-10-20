@@ -15,6 +15,8 @@ library
                         Lessons.Lesson02
                         Lessons.Lesson03
                         Lessons.Lesson04
+                        Lessons.Lesson05
+                        Lessons.Lesson06
     build-depends:      base ^>=4.20.2.0
     hs-source-dirs:     src
     default-language:   Haskell2010
