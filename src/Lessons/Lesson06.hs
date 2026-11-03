@@ -33,8 +33,8 @@ s' = getSum (foldMap Sum myE)
 p' :: Int
 p' = getProduct (foldMap Product myE)
 
-f :: Maybe Int
-f = M.getFirst (foldMap (M.First . Just) myE)
+f' :: Maybe Int
+f' = M.getFirst (foldMap (M.First . Just) myE)
 
 even' :: Int -> Bool
 even' a = a `mod` 2 == 0

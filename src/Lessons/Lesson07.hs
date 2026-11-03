@@ -17,10 +17,10 @@ parseDigit = Parser $ \input ->
 add2 :: Parser a -> Parser b -> Parser (a, b)
 add2 p1 p2 = Parser $ \a1 ->
   case runParser p1 a1 of
-    Left e1 -> Left e1
+    Left e1' -> Left e1'
     Right (v1, a2) ->
       case runParser p2 a2 of
-        Left e2 -> Left e2
+        Left e2' -> Left e2'
         Right (v2, a3) -> Right ((v1, v2), a3)
 
 e1 :: Either String Int
@@ -87,17 +87,17 @@ instance Applicative Parser where
   (<*>) :: Parser (a -> b) -> Parser a -> Parser b
   af <*> aa = Parser $ \input ->
     case runParser af input of
-      Left e1 -> Left e1
+      Left e1' -> Left e1'
       Right (f, r1) ->
         case runParser aa r1 of
-          Left e2 -> Left e2
+          Left e2' -> Left e2'
           Right (a, r2) -> Right (f a, r2)
 
 and2' :: Parser a -> Parser b -> Parser (a, b)
 and2' p1 p2 = (,) <$> p1 <*> p2
 
 and2'' :: Maybe Int -> Maybe String -> Maybe (Int, String)
-and2'' m1 m2 = (,) <$> m1 <*> m2
+and2'' m1' m2' = (,) <$> m1' <*> m2'
 
 and2''' :: [Int] -> [String] -> [(Int, String)]
-and2''' m1 m2 = (,) <$> m1 <*> m2
+and2''' m1' m2' = (,) <$> m1' <*> m2'
